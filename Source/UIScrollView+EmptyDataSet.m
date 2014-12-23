@@ -297,12 +297,12 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
 - (void)setEmptyDataSetSource:(id<DZNEmptyDataSetSource>)source
 {
     // Registers for device orientation changes
-    if (source && !self.emptyDataSetSource) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidChangeOrientation:) name:UIDeviceOrientationDidChangeNotification object:nil];
-    }
-    else if (!source && self.emptyDataSetSource) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
-    }
+//    if (source && !self.emptyDataSetSource) {
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidChangeOrientation:) name:UIDeviceOrientationDidChangeNotification object:nil];
+//    }
+//    else if (!source && self.emptyDataSetSource) {
+//        [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+//    }
     
     objc_setAssociatedObject(self, kEmptyDataSetSource, source, OBJC_ASSOCIATION_ASSIGN);
     
